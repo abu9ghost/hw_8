@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flex</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
+    <style>
+      .row {
+        display: flex;
+        margin-bottom: 5px;
+      }
+
+      .col-left {
+        width: 20%;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+      }
+
+      .col-right {
+        width: 78%;
+        min-height: 100px;
+        background-color: DodgerBlue;
+      }
+
+      .flex-container {
+        background-color: DodgerBlue;
+        display: flex;
+      }
+      .row:nth-child(3) .flex-container {
+        flex-direction: row;
+      }
+      .flex-container > div {
+        background-color: #f1f1f1;
+        width: 100px;
+        margin: 10px;
+        text-align: center;
+        line-height: 75px;
+        font-size: 30px;
+      }
+
+      .row:nth-child(1) .flex-container {
+        flex-direction: column;
+      }
+
+      .row:nth-child(2) .flex-container {
+        flex-direction: column-reverse;
+      }
+      .row:nth-child(4) .flex-container {
+        justify-content: center;
+      }
+      .row:nth-child(5) .flex-container {
+        justify-content: flex-end;
+      }
+      .row:nth-child(6) .flex-container {
+        justify-content: space-between;
+      }
+      .row:nth-child(7) .flex-container {
+        align-items: flex-end;
+      }
+      .row:nth-child(8) .flex-container {
+        justify-content: space-around;
+      }
+      .row:nth-child(9) .flex-container {
+       align-items: center;
+      }
+      .row:nth-child(10) .flex-container {
+       align-items: flex-start;
+      }
+      h1 {
+          text-align: center;
+      }
+      .row:nth-child(11) .flex-container {
+        align-items: flex-end;
+      }
+       .row:nth-child(12) .flex-container {
+        align-items: baseline;
+      }
+       .row:nth-child(13) .flex-container {
+        align-items: baseline;
+      }
+       .row:nth-child(14) .flex-container {
+        align-items: baseline;
+      }
+       .row:nth-child(15) .flex-container {
+        align-items: baseline;
+      }
+      .v {
+          height: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="col-left">flex-direction: column</div>
+      <div class="col-right">
+        <div class="flex-container">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-left">flex-direction: column-reverse</div>
+      <div class="col-right">
+        <div class="flex-container">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-left">flex-direction: row</div>
+      <div class="col-right">
+        <div class="flex-container">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-left">justify-content center</div>
+      <div class="col-right">
+        <div class="flex-container">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-left">justify-content: flex-end</div>
+      <div class="col-right">
+        <div class="flex-container">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-left">justify-content: space-between</div>
+      <div class="col-right">
+        <div class="flex-container">
+          <div>1</div>
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-left">Align-items: baseline</div>
+        <div class="col-right">
+          <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-left">justify-content: space-around</div>
+        <div class="col-right">
+          <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-left">align-items: center</div>
+        <div class="col-right">
+          <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-left">Align-items: flex-start</div>
+        <div class="col-right">
+          <div class="flex-container">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <h1>CHILD CSS</h1>
+      <br>
+      <div class="row">
+        <div class="col-left">
+        order
+        </div>
+        <div class="col-right">
+         <div class="flex-container">
+    <div style="order: 3">1</div>
+    <div style="order: 2">2</div>
+    <div style="order: 4">3</div>
+    <div style="order: 1">4</div>
+  </div> 
+  </div>
+        </div>
+        <div class="row">
+        <div class="col-left">
+        flex-grow
+        </div>
+        <div class="col-right">
+         <div class="flex-container">
+    <div style="flex-grow: 1">1</div>
+    <div style="flex-grow: 1">2</div>
+    <div style="flex-grow: 8">3</div>
+  </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-left">
+        flex-basis
+        </div>
+        <div class="col-right">
+     <div class="flex-container ">
+    <div>1</div>
+    <div>2</div>
+    <div style="flex-basis: 200px">3</div>
+    <div>4</div>
+  </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-left">
+        align-self: center
+        </div>
+        <div class="col-right">
+        <div class="flex-container v">
+    <div>1</div>
+    <div>2</div>
+    <div style="align-self: center">3</div>
+    <div>4</div>
+  </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-left">
+        align-self: flex-end <br> align-self: flex-start
+        </div>
+        <div class="col-right">
+        <div class="flex-container v">
+    <div>1</div>
+    <div style="align-self: flex-start">2</div>
+    <div style="align-self: flex-end">3</div>
+    <div>4</div>
+  </div>
+  </body>
+</html>
